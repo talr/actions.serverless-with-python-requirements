@@ -12,10 +12,10 @@ var DOMAIN_MANAGER = core.getInput('domain-manager')
 async function installServerlessAndPlugins() {
   await exeq(
     `echo Installing Serverless and plugins...`,
-    //`npm i serverless -g`,
+    // `npm i serverless -g`,
     `npm i serverless@3.21.0 -g`,
     `npm i serverless-plugin-canary-deployments`,
-    //`npm i serverless-python-requirements`
+    // `npm i serverless-python-requirements`
     `npm i serverless-python-requirements@5.4.0`
   )
 }
@@ -30,8 +30,9 @@ async function runServerlessDeploy() {
       // sls config credentials --provider aws --key ${process.env.AWS_ACCESS_KEY_ID} --secret ${process.env.AWS_SECRET_ACCESS_KEY} --verbose
       npx sls config credentials --provider aws --key ${process.env.AWS_ACCESS_KEY_ID} --secret ${process.env.AWS_SECRET_ACCESS_KEY} --verbose
     fi`,
-    //`sls deploy --verbose`
-    //`npx sls deploy --verbose`
+    `echo sls deploy`,
+    // `sls deploy --verbose`
+    // `npx sls deploy --verbose`
     `npx sls deploy  --region ${process.env.REGION} --stage ${process.env.STAGE} --verbose`
   )
 }
