@@ -28,12 +28,12 @@ async function runServerlessDeploy() {
     `echo Region ${process.env.REGION}`,
     `if [ ${process.env.AWS_ACCESS_KEY_ID} ] && [ ${process.env.AWS_SECRET_ACCESS_KEY} ]; then
       echo Running sls config credentials is not supported in Serverless V4
-      npx sls@3.21.0 config credentials --provider aws --key ${process.env.AWS_ACCESS_KEY_ID} --secret ${process.env.AWS_SECRET_ACCESS_KEY} --verbose
+      npx sls config credentials --provider aws --key ${process.env.AWS_ACCESS_KEY_ID} --secret ${process.env.AWS_SECRET_ACCESS_KEY} --verbose
     fi`,
-    `echo npx sls@3.21.0 deploy`,
+    `echo npx sls deploy`,
     // `sls deploy --verbose`
     // `npx sls deploy --verbose`
-    `npx sls@3.21.0 deploy  --region ${process.env.REGION} --stage ${process.env.STAGE} --verbose`
+    `npx sls deploy  --region ${process.env.REGION} --stage ${process.env.STAGE} --verbose`
   )
 }
 
