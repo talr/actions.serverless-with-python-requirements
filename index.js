@@ -30,10 +30,18 @@ async function runServerlessDeploy() {
       echo Running sls config credentials is not supported in Serverless V4
       npx sls config credentials --provider aws --key ${process.env.AWS_ACCESS_KEY_ID} --secret ${process.env.AWS_SECRET_ACCESS_KEY} --verbose
     fi`,
+    `echo pwd`,
+    `pwd`,
+    `echo ls -lag`,
+    `ls -lag`,
+    `cd platform-metrics-main-local-restapi-python-serverless-com`,
+    `echo ls -lag`,
+    `ls -lag`,
     `echo npx sls deploy`,
     // `sls deploy --verbose`
     // `npx sls deploy --verbose`
-    `npx sls deploy  --region ${process.env.REGION} --stage ${process.env.STAGE} --verbose`
+    `npx sls deploy  --region ${process.env.REGION} --stage ${process.env.STAGE} --verbose`,
+    `echo After npx sls deploy ...`
   )
 }
 
