@@ -40,7 +40,13 @@ async function runServerlessDeploy() {
     `cd ${process.env.REPO_DIRECTORY}`,
     `echo ls -lag`,
     `ls -lag`,
-    `echo npx sls deploy`,
+    `echo npm list hapi`,
+    `npm list hapi`,
+    `echo running "npm i @hapi/hapi" to try to solve "TypeError: Os.tmpDir is not a function" `
+    `npm i @hapi/hapi`,
+    `echo npm list hapi`,
+    `npm list hapi`,
+    `echo npx sls deploy ...`,
     // `sls deploy --verbose`
     // `npx sls deploy --verbose`
     `npx sls deploy  --region ${process.env.REGION} --stage ${process.env.STAGE} --verbose`,
