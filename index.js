@@ -42,7 +42,7 @@ async function runServerlessDeploy() {
     `ls -lag`,
     `echo npm list hapi`,
     `npm list hapi`,
-    `echo running "npm i @hapi/hapi" to try to solve "TypeError: Os.tmpDir is not a function" `
+    `echo running npm i @hapi/hapi to try to solve TypeError: Os.tmpDir is not a function in platform-metrics-main-local-restapi-python-serverless-com `
     `npm i @hapi/hapi`,
     `echo npm list hapi`,
     `npm list hapi`,
