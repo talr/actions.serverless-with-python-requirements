@@ -40,12 +40,13 @@ async function runServerlessDeploy() {
     `cd ${process.env.REPO_DIRECTORY}`,
     `echo ls -lag`,
     `ls -lag`,
-    `echo npm list hapi`,
-    `npm list hapi`,
-    `echo running npm i hapi hapi to try to solve TypeError: Os.tmpDir is not a function in platform-metrics-main-local-restapi-python-serverless-com`,
-    `npm install @hapi/hapi@21.3.10`,
-    `echo npm list hapi`,
-    `npm list hapi`,
+    //`echo npm list hapi- Before`,
+    //`npm list hapi`,
+    //`echo running npm i hapi hapi to try to solve TypeError: Os.tmpDir is not a function in platform-metrics-main-local-restapi-python-serverless-com`,
+    // serverless-offline-python@3.22.3 -> hapi@14.2.0 TypeError: Os.tmpDir is not a function
+    //`npm install @hapi/hapi@21.3.10`,
+    //`echo npm list hapi- After`,
+    //`npm list hapi`,
     `echo npx sls deploy ...`,
     // `sls deploy --verbose`
     // `npx sls deploy --verbose`
